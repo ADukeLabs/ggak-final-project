@@ -1,24 +1,161 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿* {
+  box-sizing: border-box;
+}
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Varela Round', sans-serif;
+  overflow: hidden;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+/* Search */
+
+::-webkit-input-placeholder { color:#fff; }
+::-moz-placeholder { color:#fff; } /* firefox 19+ */
+:-ms-input-placeholder { color:#fff; } /* ie */
+input:-moz-placeholder { color:#fff; }
+
+#enter-url::-webkit-input-placeholder { color:#888; }
+#enter-url::-moz-placeholder { color:#888; } /* firefox 19+ */
+#enter-url:-ms-input-placeholder { color:#888; } /* ie */
+#enter-urlinput:-moz-placeholder { color:#888; }
+
+.info-window {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  padding-left: 23px;
+  padding-top: 8px;
+}
+.info-window a {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #373737;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+[type="text"] {
+  height: 40px;
+  font-size: 13px;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px; 
+}
+#logo {
+  width: 120px;
+}
+#logo-box {
+  margin-top: 12px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+#pac-input {
+  width: 50%;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #1fb093;
 }
+
+#pac-input:focus {
+  border: 1px solid #74edd5;
+  outline: none;
+}
+
+/* Type */
+
+h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 200;
+    padding: 10px;
+}
+h4 {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 200;
+}
+/*Buttons*/
+
+.button {
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  height: 40px;
+}
+.button:hover {
+    
+}
+
+
+/* Layouts */
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.full {
+  width: 100%;
+}
+.half { 
+  width: 49%;
+}
+
+.no-space {
+    margin: 0;
+}
+
+/* Inputs */
+#enter-url {
+  margin-bottom: 10px;
+  margin-top: 13px; 
+  color: #222;
+  width: 100%;
+}
+#header {
+  margin-top: -20px;
+  height: 85px;
+  padding: 20px;
+}
+.green {
+  background-color: #2fcaab;
+}
+.pink {
+  background-color: #23C3FD;
+}
+
+#bottom-navigation {
+    background-color: #333;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+}
+
+#submit-point {
+    bottom: 0px;
+}
+#content-link {
+    bottom: 0px;
+    display: none;
+}
+#fail-message {
+    bottom: 0px;
+    display: none;
+}
+#success-navigation {
+    bottom: 0px;
+    display: none;
+    text-align: center;
+}
+
